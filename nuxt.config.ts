@@ -17,6 +17,9 @@ export default defineNuxtConfig({
     'shadcn-nuxt',
     '@nuxt/icon',
   ],
+  build: {
+    transpile: ['gsap'],
+  },
   colorMode: {
     classSuffix: '',
   },
