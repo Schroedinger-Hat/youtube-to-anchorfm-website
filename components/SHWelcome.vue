@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import SpotifyLogo from '~/assets/svg/spotify-logo.svg'
-import YoutubeLogo from '~/assets/svg/youtube-logo.svg'
+import type IntroAnimationClient from './IntroAnimation.vue'
 import SHLogo from '~/assets/svg/sh-logo.svg'
 
 useSeoMeta({
@@ -8,45 +7,16 @@ useSeoMeta({
   description: 'Welcome to the SH Nuxt Template',
 })
 
-const { gsap } = useGsap()
+const introAnimationEl = ref<ComponentPublicInstance<typeof IntroAnimationClient> | null>(null)
 
-const animateLogos = () => {
-  const tl = gsap.timeline({ repeat: -1, yoyo: true })
-
-  const animations = [
-    { selector: '.logo-yt', properties: { opacity: 0, duration: 2.5 } },
-    { selector: '.logo-sp', properties: { opacity: 0, duration: 2.5 }, position: '<' },
-    { selector: '.logo-yt-text', properties: { opacity: 1, duration: 2.5 } },
-    { selector: '.logo-sp-text', properties: { opacity: 1, duration: 2.5 }, position: '<' },
-  ]
-
-  animations.forEach(({ selector, properties, position }) => {
-    tl.to(selector, properties, position)
-  })
-}
-
-onMounted(animateLogos)
+onMounted(() => introAnimationEl.value?.animateLogos())
 </script>
 
 <template>
   <div class="app grid grid-cols-1 md:grid-cols-2 h-dvh">
     <div class="flex w-full flex-col items-center justify-center gap-y-2 p-4">
       <div class="grow content-center flex justify-center items-center w-full gap-3">
-        <div class="flex justify-center items-center relative">
-          <YoutubeLogo class="logo-yt absolute size-24" />
-          <h1 class="logo-yt-text text-4xl opacity-0 font-bold">
-            Youtube
-          </h1>
-        </div>
-        <p class="text-4xl font-bold">
-          to
-        </p>
-        <div class="flex justify-center items-center relative">
-          <SpotifyLogo class="logo-sp text-[#AFB1FF] absolute size-24 mr-8" />
-          <h1 class="logo-sp-text text-4xl font-bold opacity-0">
-            Anchor.fm
-          </h1>
-        </div>
+        <IntroAnimation ref="introAnimationEl" />
       </div>
       <nav>
         <CtaIcon
