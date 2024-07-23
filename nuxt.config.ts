@@ -9,17 +9,16 @@ const sassAdditionalData = () => {
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
+    '@nuxt/content',
+    '@nuxt/icon',
     '@nuxt/test-utils/module',
-    '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
+    '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
     'nuxt-svgo',
     'shadcn-nuxt',
-    '@nuxt/icon',
+    "@nuxt/image"
   ],
-  build: {
-    transpile: ['gsap'],
-  },
   colorMode: {
     classSuffix: '',
   },
