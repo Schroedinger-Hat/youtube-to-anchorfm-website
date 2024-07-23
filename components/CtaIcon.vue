@@ -3,7 +3,7 @@ import type { ButtonVariants } from '~/components/ui/button'
 
 withDefaults(defineProps<{
   asChild?: boolean
-  icon: string
+  icon?: string
   isAnchor?: boolean
   to?: string
   variant?: ButtonVariants['variant']
@@ -16,11 +16,15 @@ withDefaults(defineProps<{
   <SCButton size="icon" :variant="variant" class="size-8" :as-child="asChild">
     <template v-if="asChild && isAnchor">
       <NuxtLink :to="to">
-        <Icon :name="`carbon:${icon}`" class="size-5" />
+        <slot>
+          <Icon :name="`carbon:${icon}`" class="size-5" />
+        </slot>
       </NuxtLink>
     </template>
     <template v-else>
-      <Icon :name="`carbon:${icon}`" class="size-5" />
+      <slot>
+        <Icon :name="`carbon:${icon}`" class="size-5" />
+      </slot>
     </template>
   </SCButton>
 </template>
