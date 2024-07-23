@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-svgo',
     'shadcn-nuxt',
-    "@nuxt/image"
+    '@nuxt/image',
   ],
   colorMode: {
     classSuffix: '',
