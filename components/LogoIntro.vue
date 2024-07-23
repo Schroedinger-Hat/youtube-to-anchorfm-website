@@ -16,7 +16,7 @@ import YoutubeLogo from '~/assets/svg/youtube-logo.svg'
         <h1>Anchor.fm</h1>
       </div>
     </div>
-    <h2 class="scroll-m-20 text-xl font-semibold tracking-tight">
+    <h2 class="scroll-m-20 text-xl font-semibold tracking-tight text-center text-balance">
       An automation tool to publish your podcast
     </h2>
   </div>
