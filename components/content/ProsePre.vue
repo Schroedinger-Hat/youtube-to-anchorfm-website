@@ -28,7 +28,7 @@ const languageIcon = computed(() => {
       <Icon :name="`logos:${languageIcon}`" />
       <span>{{ filename }}</span>
     </div>
-    <pre :class="$props.class" class="flex justify-start items-center p-3">
+    <pre :class="$props.class" class="flex justify-start items-center p-3 overflow-x-scroll">
     <slot />
   </pre>
   </div>
