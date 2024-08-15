@@ -8,6 +8,13 @@ const sassAdditionalData = () => {
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  content: {
+    highlight: {
+      theme: {
+        default: 'tokyo-night',
+      },
+    },
+  },
   modules: [
     '@nuxt/content',
     '@nuxt/icon',
