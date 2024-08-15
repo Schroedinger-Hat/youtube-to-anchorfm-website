@@ -15,6 +15,7 @@
     "preview": "nuxt preview"
   },
   "dependencies": {
+    "@iconify-json/logos": "^1.1.44",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-vue-next": "^0.408.0",

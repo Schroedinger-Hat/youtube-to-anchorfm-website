@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@iconify-json/logos':
+        specifier: ^1.1.44
+        version: 1.1.44
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -882,6 +885,9 @@ packages:
 
   '@iconify-json/carbon@1.1.36':
     resolution: {integrity: sha512-NC3VcqLtwLZpi7+LeXj+99/byv+asrnCQxiDNCZV6hKr9WcNh6C25kJguJYfN+dV54kOkw78e+6PitQi2Bppnw==}
+
+  '@iconify-json/logos@1.1.44':
+    resolution: {integrity: sha512-sIc355/sSq4GihU4eFTDVbXoeg2rZD3yH6tNOJTNouDu9Fx259BSWH+XEEQwm/YImDIllcGqmJuNBjAu4UVs2g==}
 
   '@iconify/collections@1.0.439':
     resolution: {integrity: sha512-wu0nd41L1BMUB/wlKCJDNkqTSFRC5dzSpERG/q0Jam7KMl6BHYPKnSBXkjMhhIPREtvxb5MnXmht40pUjgMKZg==}
@@ -6557,6 +6563,10 @@ snapshots:
   '@humanwhocodes/retry@0.3.0': {}
 
   '@iconify-json/carbon@1.1.36':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/logos@1.1.44':
     dependencies:
       '@iconify/types': 2.0.0
 
